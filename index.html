@@ -8,19 +8,221 @@
     <!-- fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <!-- css -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <!-- nav -->
-    
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="https://bulma.io">
+                    <h1>BIKELOCITY</h1>
+                </a>
+            
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                </a>
+            </div>
+            
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                <a class="navbar-item">
+                    Repair now
+                </a>
+            
+                <a class="navbar-item">
+                    Contact Us
+                </a>
+                <a class="navbar-item">
+                    FAQ
+                </a>
+            
+            
+                </div>
+            
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-info">
+                                <strong>Repair now  <i class="fas fa-tools"></i></strong>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+    </nav>
     <!-- hero -->
+    <div  class="hero hero-img">
+        <div id="hero-section" class="hero-body">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="title is-1">Bikelocity</h1>
+                    <h2 class="title is-4">On-demand bike repair</h2>
+                    <h2 class="title is-4">Anytime, anywhere</h2>
+                    <a href="" class="button is-info">Repair Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-footer">
+            <div class="columns has-text-centered">
+                <div class="column"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/2018_Trek_logo_word_mark_wiki.svg/1280px-2018_Trek_logo_word_mark_wiki.svg.png" alt=""></div>
+                <div class="column"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/2018_Trek_logo_word_mark_wiki.svg/1280px-2018_Trek_logo_word_mark_wiki.svg.png" alt=""></div>
+                <div class="column"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/2018_Trek_logo_word_mark_wiki.svg/1280px-2018_Trek_logo_word_mark_wiki.svg.png" alt=""></div>
+            </div>
+        </div>
+    </div>
     <!-- how it works -->
-    <!-- price calculator -->
+    <section  id="works" class="hero">
+        <div class="hero-body">
+            <h1 class="title is-1">How it works</h1>
+            <div class="columns has-text-centered">
+                <div class="column">
+                    <img src="icons/calculate.png" alt="">
+                    <h2 class="title is-4"><b>1.</b> Calculate Price</h2>
+                </div>
+                <div class="column">
+                    <p><img src="icons/calendar.png"/></p>
+                    <h2 class="title is-4"><b>2.</b> Schedule Repair</h2>
+                </div>
+                <div class="column">
+                    <img src="icons/repair.png" alt="">
+                    <h2 class="title is-4"><b>3.</b> Mechanic meets you</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <!-- TEST CALCULATOR -->
+    <section class="section" >
+            <div id="calculator" class="container has-text-centered">
+                <img src="https://images.giant-bicycles.com/b_white,c_pad,h_400,q_80,w_600/mid7nkitgq05ujeznx1o/MY20TCRADV2-KOM_ColorA.jpg" alt="">
+                <h3 id='price-title' class="title is-4">Our Price: </h3>
+            
+              <form name='repair' method='POST' autocomplete='on'>
+                <input type='hidden' name='form-name' value='repair' />
+        
+                  
+                  <div class="field">
+                        <div class="select is-info is-rounded">
+                          <select id="selectBrand" onchange="myFunction()">
+                                <option selected disabled>Select Make</option>
+                                <option value="trek">Trek</option>
+                                <option value="giant">Giant</option>
+                                <option value="cannondale">Cannondale</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                            <div class="select is-info is-rounded">
+                              <select id="selectIssue" onchange="myFunction()">
+                                    <option selected disabled>Select Issue</option>
+                                    <option value="tire">Tire Replacement</option>
+                                    <option value="chain">Chain Replacement</option>
+                                    <option value="tune-up">Simple Tune Up</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                  
+                
+        
+                <hr>
+                <h2 class="title is-5 has-text-weight-light ">Contact info <i class="fas fa-users"></i></h2>
+        
+                <div class="field">
+                  <div class="field is-horizontal">
+                    <div class="field-body">
+                      <div class="field">
+                        <p class="control is-expanded has-icons-left">
+                          <input class="input" name="name" type="text" placeholder="Name" required>
+                          <span class="icon is-small is-left">
+                            <i class="fas fa-user"></i>
+                          </span>
+                        </p>
+                      </div>
+                      <div class="field">
+                        <p class="control is-expanded has-icons-left has-icons-right">
+                          <input class="input " type="text" name="address" placeholder="Address" required>
+                          <span class="icon is-small is-left">
+                            <i class="fas fa-home"></i>
+                          </span>
+                        </p>
+                      </div>
+        
+                      <div class="field">
+                        <p class="control is-expanded has-icons-left has-icons-right">
+                          <input class="input " type="tel" name="cell" placeholder="Cell #" required>
+                          <span class="icon is-small is-left">
+                            <i class="fas fa-phone"></i>
+                          </span>
+                        </p>
+                      </div>
+                      <div class="field">
+                        <p class="control is-expanded has-icons-left has-icons-right">
+                          <input class="input " name="email" type="email" placeholder="Email" required>
+                          <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                          </span>
+                        </p>
+                      </div>
+        
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <h2 class="title is-5 has-text-weight-light	">Time & Date <i class="fas fa-clock"></i></h2>
+        
+                <div class="field is-horizontal">
+                  <div class="field-body">
+                    <div class="field">
+                      <input class="input" value="time" type="time" name="time" min="09:00" max="22:00">
+                    </div>
+                    <div class="field">
+                      <input required class="input" value='date' type="date">
+                    </div>
+                  </div>
+                </div>
+                  <br>
+                <button type='submit' class="btn btn-action">Book Repair Now</button>
+              </form>
+            </div>
+          </section>
     <!-- get started banner -->
     
+    
     <!-- js scripts -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+// Get all "navbar-burger" elements
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+// Check if there are any navbar burgers
+if ($navbarBurgers.length > 0) {
+
+  // Add a click event on each of them
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      // Get the target from the "data-target" attribute
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+}
+
+});
+
+</script>
+<script src="main.js"></script>
 </body>
 </html>

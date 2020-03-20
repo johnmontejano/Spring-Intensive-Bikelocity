@@ -1,0 +1,87 @@
+#hero-section {
+    padding: 3rem;
+}
+.hero-img {
+    background: url('https://i.postimg.cc/8z9n0SK7/bike-hero.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: gray;
+    height: 500px;
+    margin-bottom: 1.5rem;
+    
+}
+.hero-img .title{
+    color: white;
+}
+
+.hero-footer{
+    background: rgb(242, 242, 242);
+    padding: 15px;
+}
+.hero-footer img{
+    max-width: 200px;
+}
+
+/* HOW IT WORKS */
+#works{
+    margin-top:2rem;
+    padding: 1rem;
+}
+#works img {
+    margin-bottom: 1rem;
+
+}
+/* CALCULATOR */
+#calculator{
+    background:white;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: rgb(133, 133, 133);
+    padding: 4rem;
+    width:70%;
+}
+#calculator img{width: 70%;}
+#calculator select{
+    margin: 0 auto;
+}
+#calculator label {
+    color: white;
+}
+/* MEDIA QUERIES */
+
+/* SMALL DEVICES */
+@media only screen and (max-width: 766px) {
+    #hero-section {
+        padding: 5rem 1.5rem;
+    }
+    #works h1{
+        text-align: center;
+        margin-top: 1rem;
+       }
+       .dropdowns {
+           margin: 0 auto;
+    }
+    #works{
+        padding: 3rem;
+    }
+    #works h1 {
+        font-size: 25px;
+        margin-top: 3rem;
+    }
+    #works h2 {font-size: 15px;}
+    #works img {
+        width: 20%;
+    }
+    #calculator {
+        padding: 1rem;
+    }
+  
+}
+/* larger devices */
+@media only screen and (min-width: 768px) {
+    #works img {
+        width: 45%;
+    }
+}
