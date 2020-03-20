@@ -22,9 +22,5 @@ function myFunction() {
     else if (selectIssue == "tire") {
         priceTitle.innerText = prices["trek"]["tire"]
     }
-    else if (selectIssue == "chain") {
-        priceTitle.innerText = prices["trek"]["chain"]
-    }  
-    
 }
 
